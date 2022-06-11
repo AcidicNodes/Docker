@@ -28,7 +28,6 @@ ENV         DEBIAN_FRONTEND noninteractive
 
 RUN         apt-get update -y \
             && apt install -y netcat iproute2 \
-            && npm -g install npm@latest \
             && useradd -m -d /home/container container
 
 USER        container
