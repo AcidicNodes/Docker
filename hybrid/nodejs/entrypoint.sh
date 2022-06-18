@@ -29,9 +29,12 @@ export INTERNAL_IP=`ip route get 1 | awk '{print $NF;exit}'` # || Set a local va
 toilet --filter border:gay AcidicNodes
 echo
 
-sleep 0.5
+sleep 0.2
 
 printf "\033[1m\033[33mcontainer@acidicnodes~ \033[0mShowing NodeJs information...\n"
+echo
+
+sleep 0.1
 
 printf "\033[1m\033[33mcontainer@acidicnodes~ \033[0mNodeJs version: $(node -v)\n" # || Show the actual NodeJs version.
 
