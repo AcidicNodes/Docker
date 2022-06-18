@@ -33,15 +33,14 @@ sleep 0.5
 
 printf "\033[1m\033[33mcontainer@acidicnodes~ \033[0mShowing NodeJs information...\n"
 
-printf "\033[1m\033[33mcontainer@acidicnodes~ \033[0mNodeJs version:\n" # || Show the actual NodeJs version.
-node -v
+printf "\033[1m\033[33mcontainer@acidicnodes~ \033[0mNodeJs version: $(node -v)\n" # || Show the actual NodeJs version.
 
-printf "\033[1m\033[33mcontainer@acidicnodes~ \033[0mNPM version:\n" # || Show the actual NPM version.
-npm -v 
+printf "\033[1m\033[33mcontainer@acidicnodes~ \033[0mNPM version: $(npm -v)\n" # || Show the actual NPM version. 
 
-printf "\033[1m\033[33mcontainer@acidicnodes~ \033[0mPython version:\n" # || Show the actual Python version.
-python3 --version
+printf "\033[1m\033[33mcontainer@acidicnodes~ \033[0mPython version: $(python3 --version)\n" # || Show the actual Python version.
+
+sleep 0.2
 
 MODIFIED_STARTUP=$(echo -e ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g') # || Replace the Startup command.
 
-eval ${MODIFIED_STARTUP} # || Start the server.
+eval ${MODIFIED_STARTUP} &> /dev/null # || Start the server.
