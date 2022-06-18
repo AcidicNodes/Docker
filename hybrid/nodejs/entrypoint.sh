@@ -22,18 +22,26 @@
 
 # || Start [📍] || #
 
-cd /home/container # || Change container's work directory.
+cd /home/container # || Changing container's working directory.
 
 export INTERNAL_IP=`ip route get 1 | awk '{print $NF;exit}'` # || Set a local variable that makes the private Docker IP address available for the processes.
 
-node -v # || Show the actual NodeJs version.
+toilet --filter border:gay AcidicNodes
+echo
 
-npm -v # || Show the actual NPM version.
+sleep 0.5
 
-python3 --version # || Show the actual Python version.
+printf "\033[1m\033[33mcontainer@acidicnodes~ \033[0mShowing NodeJs information...\n"
+
+printf "\033[1m\033[33mcontainer@acidicnodes~ \033[0mNodeJs version:\n" # || Show the actual NodeJs version.
+node -v
+
+printf "\033[1m\033[33mcontainer@acidicnodes~ \033[0mNPM version:\n" # || Show the actual NPM version.
+npm -v 
+
+printf "\033[1m\033[33mcontainer@acidicnodes~ \033[0mPython version:\n" # || Show the actual Python version.
+python3 --version
 
 MODIFIED_STARTUP=$(echo -e ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g') # || Replace the Startup command.
-
-echo "AcidicMonkeys" # || Show the new Startup command.
 
 eval ${MODIFIED_STARTUP} # || Start the server.
