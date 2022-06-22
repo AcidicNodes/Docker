@@ -38,7 +38,11 @@ sleep 0.1
 
 printf "\033[1m\033[33mcontainer@acidicnodes~ \033[0mNodeJs version: $(node -v)\n" # || Show the actual NodeJs version.
 
-printf "\033[1m\033[33mcontainer@acidicnodes~ \033[0mNPM version: $(npm -v)\n" # || Show the actual NPM version. 
+printf "\033[1m\033[33mcontainer@acidicnodes~ \033[0mNPM version: $(npm -v)\n" # || Show the actual NPM version.
+
+printf "\033[1m\033[33mcontainer@acidicnodes~ \033[0mYarn version: $(yarn version check)\n" # || Show the actual Yarn version. 
+
+printf "\033[1m\033[33mcontainer@acidicnodes~ \033[0mPNPM version: $(pnpm version)\n" # || Show the actual PNPM version. 
 
 printf "\033[1m\033[33mcontainer@acidicnodes~ \033[0mPython version: $(python3 --version)\n" # || Show the actual Python version.
 
