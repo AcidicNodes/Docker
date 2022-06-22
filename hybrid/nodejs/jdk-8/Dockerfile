@@ -27,7 +27,7 @@ LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 RUN         apt-get update -y \
             && apt-get -y install curl wget ffmpeg iproute2 git sqlite3 libsqlite3-dev python3 chromium tzdata ca-certificates dnsutils build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev toilet \
             && npm -g install npm@latest \
-            && npm -g install yarn@latest \
+            # && npm -g install yarn@latest \
             && npm -g install pnpm@latest \
             && apt-get -y install software-properties-common \
             && apt-add-repository 'deb http://security.debian.org/debian-security stretch/updates main' \
